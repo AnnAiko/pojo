@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+
+<schema version="1.0"
+        xmlns="http://www.w3.org/2001/XMLSchema"
+        elementFormDefault="qualified"
+        targetNamespace="http://www.example.com/employments"
+        xmlns:tns="http://www.example.com/employments"> 
+
+    <element name="employments"> 
+        <complexType>
+            <sequence>
+                <element name="employment"
+                         type="tns:Employment"
+                         minOccurs="2"
+                         maxOccurs="unbounded" />
+            </sequence>
+        </complexType>
+    </element>
+    <complexType name="Employment">
+        <sequence>
+            <element name="countStudent" type="integer" />
+            <element name="subject" type="tns:Subject" />
+            <element name="teaher" type="tns:Teaher"/>
+        </sequence>
+        <attribute name="group" use="optional" default="PI-1-16" >
+            <simpleType>
+                <restriction base="string">
+                    <enumeration value="PI-1-16"></enumeration>
+                    <enumeration value="ISP-1-17"></enumeration>
+                    <enumeration value="TPS-1-18"></enumeration>
+                    <enumeration value="IS-1-15"></enumeration>
+                    <enumeration value="BI-1-18"></enumeration>
+                </restriction>
+            </simpleType>
+        </attribute>
+    </complexType>
+    <complexType name="Subject">
+        <sequence>
+            <element name="nameSub" >
+                <simpleType> 
+                    <restriction base="string">
+                        <enumeration value="Math"></enumeration>
+                        <enumeration value="Literature"></enumeration>
+                        <enumeration value="Physics"></enumeration>
+                        <enumeration value="History"></enumeration>
+                    </restriction>
+                </simpleType>     
+            </element> 
+            <element name="time" >
+                <simpleType>
+                    <restriction base="string">
+                        <enumeration value="Monday"></enumeration>
+                        <enumeration value="Tuesday"></enumeration>
+                        <enumeration value="Wednesday"></enumeration>
+                        <enumeration value="Thursday"></enumeration>
+                        <enumeration value="Friday"></enumeration>
+                        <enumeration value="Saturday"></enumeration>
+                    </restriction>
+                </simpleType>
+            </element> 
+        </sequence>
+    </complexType>
+    <complexType name="Teaher">
+        <sequence>
+            <element name="fio" type="string" />
+            <element name="countPairTime" type="integer" /> 
+        </sequence>
+    </complexType>
+</schema>

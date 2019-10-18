@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<employments>
+	<employment group="PI-1-16">
+		<countStudent>18</countStudent>
+		<subject>
+			<nameSub>Math</nameSub>
+			<time>Tuesday</time>
+			<audience>Д-504</audience>
+		</subject>
+		<teaсher>
+			<fio>Иванов Иван Иванович</fio>
+			<сountPairTime>2</сountPairTime>
+		</teaсher>
+	</employment>
+	<employment group="ISP-1-17">
+		<countStudent>25</countStudent>
+		<subject>
+			<nameSub>Literature</nameSub>
+			<time>Frida</time>
+			<audience>В-304</audience>
+		</subject>
+		<teaсher>
+			<fio>Силоров Сергей Михайлович</fio>
+			<сountPairTime>3</сountPairTime>
+		</teaсher>
+	</employment>
+</employments>
