@@ -2,14 +2,13 @@ package lab_6_1;
 
 import java.io.Serializable;
 
+//Класс Раписание занятий
 public class Employment implements Serializable {
 
     private Subject subject;
-
+    //Количество студентов, занимающихся на каждой паре
     private int countStudent;
-
     private Teacher teaсher;
-
     private String group;
 
     public Employment(String group, int countStudent, Subject subject, Teacher teaсher) {

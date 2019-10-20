@@ -2,8 +2,10 @@ package lab_6_1;
 
 import java.io.Serializable;
 
+//Класс Преподаватель
 public class Teacher implements Serializable {
 
+    //Количество пар в неделю по каждому предмету
     private int countPairTime;
 
     private String fio;

@@ -21,12 +21,12 @@ public class Validation {
         SchemaFactory factory = SchemaFactory.newInstance(language);
 
         try {
-            // создание схемы
+            //Создать схему
             schema = factory.newSchema(new File(schemaName));
-            // создание валидатора на основе схемы          
+            //Создать валидатоа на основе схемы          
             Validator validator = schema.newValidator();
-            // проверка документа           
             Source source = new StreamSource(fileName);
+            //Проверить документ   
             validator.validate(source);
             System.out.println("Валидация прошла успешна " + fileName);
         } catch (SAXException e) {

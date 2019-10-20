@@ -20,7 +20,7 @@
         <sequence>
             <element name="countStudent" type="integer" />
             <element name="subject" type="tns:Subject" />
-            <element name="teaсher" type="tns:Teaсher"/>
+            <element name="teacher" type="tns:Teacher"/>
         </sequence>
         <attribute name="group" use="optional" default="PI-1-16" >
             <simpleType>
@@ -61,7 +61,7 @@
             <element name="audience" type="string" /> 
         </sequence>
     </complexType>
-    <complexType name="Teaсher">
+    <complexType name="Teacher">
         <sequence>
             <element name="fio" type="string" />
             <element name="countPairTime" type="integer" /> 

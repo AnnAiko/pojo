@@ -2,10 +2,10 @@ package lab_6_1;
 
 import java.io.Serializable;
 
+//Класс Предмет
 public class Subject implements Serializable {
 
     private String nameSub;
-
     private String time;
     private String audience;
 

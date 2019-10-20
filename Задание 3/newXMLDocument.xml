@@ -10,22 +10,24 @@
         <subject>
             <nameSub>Math</nameSub>
             <time>Tuesday</time>
+			<audience>Д-504</audience>
         </subject>
-        <teaher>
+        <teacher>
             <fio>Иванов Иван Иванович</fio>
             <countPairTime>2</countPairTime>
-        </teaher>
+        </teacher>
     </employment>
     <employment group="ISP-1-17">
         <countStudent>25</countStudent>
         <subject>
             <nameSub>Literature</nameSub>
             <time>Friday</time>
+			<audience>В-304</audience>
         </subject>
-        <teaher>
+        <teacher>
             <fio>Силоров Сергей Михайлович</fio>
             <countPairTime>3</countPairTime>
-        </teaher>
+        </teacher>
     </employment>
 
 </employments>

@@ -7,6 +7,15 @@ public class Lab_6_3 {
         Validation valid = new Validation();
         //Проверка валидации XML по XSD 
         valid.validet();
+        //Экземпляр класса marshDemarsh
+        marshDemarsh marsh = new marshDemarsh();
+        System.out.println("Маршализация");
+        //Маршализация
+        marsh.marching();
+        System.out.println("Демаршализация");
+        //Демаршализация
+        marsh.unMarching();
+
     }
 
 }

@@ -1,16 +1,18 @@
-package unmarsh;
+package lab_6_2;
 
 import javax.xml.bind.annotation.*;
 import javax.xml.bind.annotation.adapters.*;
-// задание последовательности элементов XML
 
+//Элемент самого верхнего уровня, все остальные элементы лежат в нем
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
+//Задать последовательности элементов XML
 @XmlType(name = "Employment", propOrder = {
     "countStudent",
     "subject",
     "teaсher"
 })
+//Класс Расписание занятий
 public class Employment {
 
     @XmlAttribute(required = true)
@@ -24,8 +26,9 @@ public class Employment {
     @XmlElement(required = true)
     private Teaсher teaсher = new Teaсher();
 
+    //Необходим для маршаллизации/демаршалиизации XML
     public Employment() {
-    } // необходим для маршаллизации/демаршалиизации XML
+    }
 
     public Employment(String group, int countStudent, Subject subject, Teaсher teaсher) {
         this.group = group;
@@ -55,20 +58,21 @@ public class Employment {
                 + subject.toString() + teaсher.toString();
     }
 
+    //Задать последовательности элементов XML
     @XmlRootElement
     @XmlType(name = "subject", propOrder = {
         "nameSub",
         "time",
         "audience"
     })
-    // внутренний класс
+    //Внутренний класс Предмет
     public static class Subject {
 
         private String nameSub;
         private String time;
         private String audience;
 
-        // необходим для маршаллизации/демаршалиизации XML
+        //Необходим для маршаллизации/демаршалиизации XML
         public Subject() {
         }
 
@@ -107,18 +111,20 @@ public class Employment {
                     + "\n\tДень недели: " + time + "\n\tАудитория: " + audience + "\n";
         }
     }
+
+    //Задать последовательности элементов XML
     @XmlRootElement
     @XmlType(name = "teaсher", propOrder = {
         "fio",
         "сountPairTime"
     })
-    // внутренний класс
+    //Внутренний класс Преподаватель
     public static class Teaсher {
 
         private String fio;
         private int countPairTime;
 
-        // необходим для маршаллизации/демаршалиизации XML
+        //Необходим для маршаллизации/демаршалиизации XML
         public Teaсher() {
         }
 
